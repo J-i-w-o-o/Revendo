@@ -27,6 +27,7 @@ export default {
         'laptopH': '1050px',
         // => @Home (min-width: 600px) { ... }
         'imgH': '1300px',
+        'bigH': '1830px'
       },
       colors:{
         'discord': '#7289DA',

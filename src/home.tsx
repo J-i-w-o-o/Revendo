@@ -116,7 +116,7 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <div className="h-screen flex flex-col justify-start items-center">
+      <div className="flex flex-col justify-start items-center">
         <Section id="home" className="pt-[120px]">
           <VerticalColumns>
             <HorizontalColumns>
@@ -163,42 +163,42 @@ export default function Home() {
         <Section id="about">
           <VerticalColumns>
             <HorizontalColumns>
-              <Column>
-                <Box className="rounded-2xl">FEATURE ONE</Box>
+              <Column className="bg-white border-[9px] h-[450px]  rounded-[85px] border-discord text-center flex flex-col p-6 mx-5 px-5  items-center m:w-1/2">
+               <img className="w-[123px] h-[118px]" src="/src/assets/checkico.png" alt="" />
+                <Box className="NotoSansJP font-black text-discord text-[36px] py-3">Feature One</Box>
+                <Box className=" NotoSansJP font-black text-discord text-[20px] leading-[30px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis felis convallis, rhoncus leo id, scelerisque purus. Ut auctor gravida nulla.</Box>
               </Column>
-              <Column>
-                <Box className="rounded-2xl whitespace-nowrap">FEATURE TWO</Box>
+              <Column className="bg-white border-[9px] h-[450px]  rounded-[85px] border-discord text-center flex flex-col p-6 mx-5 px-5   items-center m:w-1/2">
+              <img className="w-[123px] h-[118px]" src="/src/assets/flagico.png" alt="" />
+                <Box className="NotoSansJP font-black text-discord text-[36px] py-3">Feature Two</Box>
+                <Box className=" NotoSansJP font-black text-discord text-[20px] leading-[30px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis felis convallis, rhoncus leo id, scelerisque purus. Ut auctor gravida nulla.</Box>
               </Column>
-              <Column>
-                <Box className="rounded-2xl whitespace-nowrap">
-                  FEATURE THREE
-                </Box>
+              <Column className="bg-white border-[9px] h-[450px]  rounded-[85px] border-discord text-center flex flex-col p-6 mx-5 px-5  items-center m:w-1/2">
+              <img className="w-[123px] h-[118px]" src="/src/assets/starico.png" alt="" />
+                <Box className="NotoSansJP font-black text-discord text-[36px] py-3">Feature Three</Box>
+                <Box className=" NotoSansJP font-black text-discord text-[20px] leading-[30px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis felis convallis, rhoncus leo id, scelerisque purus. Ut auctor gravida nulla.</Box>
               </Column>
             </HorizontalColumns>
-            <Column>
-              <Box>
                 <HorizontalColumns>
-                  <Column className="">
-                    <Box>Heading explaining the main benefit of ReVendo</Box>
-                    <Box>
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium, totam rem
-                      aperiam, eaque ipsa quae ab illo inventore veritatiis. Ut
-                      auctor gravida nulla. Nam id erat elementum, accumsan dui
-                      non, porttitor lorem.
+                  <Column className="imgH:bg-white imgH:border-[9px] imgH:h-[420px]  imgH:rounded-[85px] imgH:border-discord imgH:flex imgH:mx-5 hidden ">
+                  <Column className="text-center w-2/3  rounded-[85px] mx-16 my-5">
+                    <Box className="mt-2 NotoSansJP font-black text-black text-[36px] py-3 text-left bigH:py-5 bigH:mt-5 ">Heading explaining the main benefit of ReVendo</Box>
+                    <Box className="NotoSansJP font-black text-discord text-[20px] leading-[30px] text-left pt-3 bigH:pt-5">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatiis.
                     </Box>
-                  </Column>
-                  <Column>
-                    <Box className=" justify-center">
-                      <img
+                    <br></br>
+                    <Box className="NotoSansJP font-black text-discord text-[20px] leading-[30px] text-left">
+                    Ut auctor gravida nulla. Nam id erat elementum, accumsan dui non, porttitor lorem.
+                    </Box>
+                  </Column> 
+                  <Column className="w-1/2">
+                      <img className="w-[525px] h-[400px] rounded-[85px] bigH:w-[570px]"
                         src="https://i.pinimg.com/736x/6f/df/bc/6fdfbc41d6a8e26d4b9073bc1afd899f.jpg"
                         alt=""
                       />
-                    </Box>
+                  </Column>
                   </Column>
                 </HorizontalColumns>
-              </Box>
-            </Column>
           </VerticalColumns>
         </Section>
 
@@ -298,7 +298,7 @@ type CommonProps = {
 const Section = ({ children, className, id }: CommonProps) => (
   <div
     className={
-      "relative my-5 mx-5 tabletH:mx-15 laptopH:mx-20 items-center " + className
+      "relative m-5 p-5 tabletH:mx-15 laptopH:mx-20 items-center " + className
     }
     id={id}
   >
@@ -308,7 +308,7 @@ const Section = ({ children, className, id }: CommonProps) => (
 
 //Second Div  CONTROL BELOW
 const VerticalColumns = ({ children, className }: CommonProps) => (
-  <div className={"flex flex-col gap-4 items-center " + className}>
+  <div className={"flex flex-col gap-4 items-center " + className}> 
     {children}
   </div>
 );
